@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: astonvilla-app
+spec:
+  selector:
+    matchLabels:
+      app: astonvilla-app
+  template:
+    metadata:
+      labels:
+        app: astonvilla-app
+    spec:
+      containers:
+      - name: astonvilla-app
+        image: arij17/astonvilla-app:1.1.4
+        ports:
+        - containerPort: 80
